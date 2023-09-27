@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { App } from 'components/App';
 
 axios.defaults.baseURL =
   'https://pixabay.com/api/?q=cat&page=1&key=38733700-96318c553c84bf90463eb3752&image_type=photo&orientation=horizontal&per_page=12';
