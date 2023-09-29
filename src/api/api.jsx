@@ -24,7 +24,7 @@ export const getItems = async (myState, setState, searchName, currentPage) => {
         Math.ceil(response.data.total / response.config.params.per_page)
       ),
     });
-    if (currentPage == 1) {
+    if (currentPage === 1) {
       setState({ images: images });
     } else {
       setState({ images: [...myState.images, ...images] });
