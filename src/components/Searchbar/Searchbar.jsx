@@ -33,7 +33,6 @@ export class Searchbar extends Component {
           </SearchFormBtn>
 
           <SearchFormInput
-            SearchForm
             name="111"
             type="text"
             // autocomplete="off"

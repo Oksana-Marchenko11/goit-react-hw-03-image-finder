@@ -12,7 +12,7 @@ export class Loader extends Component {
         color="green"
         ariaLabel="three-dots-loading"
         wrapperStyle
-        wrapperClass
+        // wrapperClass
       />
     );
   }
