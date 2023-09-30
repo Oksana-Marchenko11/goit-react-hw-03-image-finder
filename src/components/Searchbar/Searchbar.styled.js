@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import backgroundImage from '../../search.svg'
 
 export const SearchbarDiv = styled.header`
  top: 0;
@@ -34,6 +35,7 @@ export const SearchFormBtn = styled.button`
   height: 48px;
   border: 0;
   /* background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg'); */
+  background-image: url(${backgroundImage});
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
