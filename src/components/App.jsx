@@ -28,7 +28,6 @@ export class App extends Component {
     // console.log(this.state.currentPage);
     console.log(this.state);
   };
-
   componentDidUpdate(_, prevState) {
     if (
       prevState.searchName !== this.state.searchName ||

@@ -5,7 +5,7 @@ import {
   SearchForm,
   SearchFormBtn,
   SearchFormInput,
-  SearchFormButtonLabel,
+  // SearchFormButtonLabel,
 } from './Searchbar.styled';
 
 export class Searchbar extends Component {
@@ -27,12 +27,13 @@ export class Searchbar extends Component {
   render() {
     return (
       <SearchbarDiv>
-        <SearchForm id="111" onSubmit={this.handleSubmit}>
+        <SearchForm onSubmit={this.handleSubmit}>
           <SearchFormBtn type="submit">
-            <SearchFormButtonLabel>Search</SearchFormButtonLabel>
+            {/* <SearchFormButtonLabel htmlFor={111}>Search</SearchFormButtonLabel> */}
           </SearchFormBtn>
 
           <SearchFormInput
+            id={111}
             name="111"
             type="text"
             // autocomplete="off"

@@ -34,7 +34,6 @@ export const SearchFormBtn = styled.button`
   width: 48px;
   height: 48px;
   border: 0;
-  /* background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg'); */
   background-image: url(${backgroundImage});
   background-size: 40%;
   background-repeat: no-repeat;
@@ -46,18 +45,18 @@ export const SearchFormBtn = styled.button`
   &:hover {
   opacity: 1;
 }
-  `
-export const SearchFormButtonLabel = styled.label`
-position: absolute;
-width: 1px;
-height: 1px;
-padding: 0;
-overflow: hidden;
-clip: rect(0, 0, 0, 0);
-white-space: nowrap;
-clip-path: inset(50%);
-border: 0;
 `
+// export const SearchFormButtonLabel = styled.label`
+// position: absolute;
+// width: 1px;
+// height: 1px;
+// padding: 0;
+// overflow: hidden;
+// clip: rect(0, 0, 0, 0);
+// white-space: nowrap;
+// clip-path: inset(50%);
+// border: 0;
+// ` 
 
 
 export const SearchFormInput = styled.input`
