@@ -1,6 +1,7 @@
 import { Component } from 'react';
 // import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
+import { Overlay, ModalDiv } from './Modal.styled';
 
 // Объект модального окна в DOM-дереве
 // const modalRoot = document.querySelector('#modal-root');
@@ -22,18 +23,19 @@ class Modal extends Component {
     }
   };
 
-  handleBackdropClick = event => {
+  handleBackdrop = event => {
     if (event.currentTarget === event.target) {
       this.props.onClose();
     }
   };
   render() {
+    const { largeImageURL, tags } = this.props;
     return (
-      <div className="overlay">
-        <div className="modal">
-          <img src="" alt="" />
-        </div>
-      </div>
+      <Overlay onClick={this.handleBackdrop}>
+        <ModalDiv>
+          <img src={largeImageURL} alt={tags} />
+        </ModalDiv>
+      </Overlay>
     );
   }
 }

@@ -1,6 +1,12 @@
 import { Component } from 'react';
-// import { getItems } from 'api/api';
-import css from './Searchbar.module.css';
+import React from 'react';
+import {
+  SearchbarDiv,
+  SearchForm,
+  SearchFormBtn,
+  SearchFormInput,
+  SearchFormButtonLabel,
+} from './Searchbar.styled';
 
 export class Searchbar extends Component {
   state = {
@@ -20,14 +26,14 @@ export class Searchbar extends Component {
 
   render() {
     return (
-      <header>
-        <form className={css.form} id="111" onSubmit={this.handleSubmit}>
-          <button type="submit" className={css.button}>
-            <span className={css.buttonLabel}>Search</span>
-          </button>
+      <SearchbarDiv>
+        <SearchForm id="111" onSubmit={this.handleSubmit}>
+          <SearchFormBtn type="submit">
+            <SearchFormButtonLabel>Search</SearchFormButtonLabel>
+          </SearchFormBtn>
 
-          <input
-            // class="input"
+          <SearchFormInput
+            SearchForm
             name="111"
             type="text"
             // autocomplete="off"
@@ -35,8 +41,8 @@ export class Searchbar extends Component {
             placeholder="Search images and photos"
             onChange={this.handleChange}
           />
-        </form>
-      </header>
+        </SearchForm>
+      </SearchbarDiv>
     );
   }
 }

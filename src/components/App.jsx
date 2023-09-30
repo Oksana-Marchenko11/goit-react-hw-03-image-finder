@@ -4,6 +4,7 @@ import { ImageGallery } from './ImageGallery/ImageGallery';
 import { getItems } from 'api/api';
 import { Loader } from './Loader/Loader';
 import { Button } from './Button/Button';
+import { AppDiv } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -14,6 +15,20 @@ export class App extends Component {
     currentPage: 1,
     totalPages: 0,
   };
+  handleSubmit = searchValue => {
+    this.setState({ searchName: searchValue });
+    this.setState({ currentPage: 1 });
+    console.log(this.state);
+    // console.log(this.state.totalPages);
+  };
+  loadMore = () => {
+    this.setState(prevState => ({
+      currentPage: prevState.currentPage + 1,
+    }));
+    // console.log(this.state.currentPage);
+    console.log(this.state);
+  };
+
   componentDidUpdate(_, prevState) {
     if (
       prevState.searchName !== this.state.searchName ||
@@ -28,32 +43,18 @@ export class App extends Component {
       this.setState({ isLoading: true });
     }
   }
-  handleSubmit = searchValue => {
-    this.setState({ searchName: searchValue });
-    this.setState({ currentPage: 1 });
-    console.log(this.state);
-    // console.log(this.state.totalPages);
-  };
-
-  loadMore = () => {
-    this.setState(prevState => ({
-      currentPage: prevState.currentPage + 1,
-    }));
-    // console.log(this.state.currentPage);
-    console.log(this.state);
-  };
 
   render() {
     const { images, currentPage, totalPages, isLoading } = this.state;
     return (
-      <div>
+      <AppDiv>
         <Searchbar onSubmit={this.handleSubmit} />
         {isLoading && <Loader />}
         <ImageGallery data={this.state.images} />
         {images.length > 0 && totalPages !== currentPage && (
           <Button loadMore={this.loadMore} />
         )}
-      </div>
+      </AppDiv>
     );
   }
 }
