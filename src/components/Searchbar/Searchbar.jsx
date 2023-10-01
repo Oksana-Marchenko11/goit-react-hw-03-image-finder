@@ -13,15 +13,15 @@ export class Searchbar extends Component {
     searchValue: '',
   };
 
-  handleChange = e => {
+  handleChange = async e => {
     this.setState({ searchValue: e.target.value });
     console.log(this.state.searchValue);
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
     // console.log(this.state.searchValue);
-    this.props.onSubmit(this.state.searchValue);
+    await this.props.onSubmit(this.state.searchValue);
   };
 
   render() {
