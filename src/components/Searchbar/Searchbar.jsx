@@ -1,11 +1,11 @@
 import { Component } from 'react';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   SearchbarDiv,
   SearchForm,
   SearchFormBtn,
   SearchFormInput,
-  // SearchFormButtonLabel,
 } from './Searchbar.styled';
 
 export class Searchbar extends Component {
@@ -27,10 +27,7 @@ export class Searchbar extends Component {
     return (
       <SearchbarDiv>
         <SearchForm onSubmit={this.handleSubmit}>
-          <SearchFormBtn type="submit">
-            {/* <SearchFormButtonLabel htmlFor={111}>Search</SearchFormButtonLabel> */}
-          </SearchFormBtn>
-
+          <SearchFormBtn type="submit"></SearchFormBtn>
           <SearchFormInput
             id={111}
             name="111"
@@ -45,3 +42,6 @@ export class Searchbar extends Component {
     );
   }
 }
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

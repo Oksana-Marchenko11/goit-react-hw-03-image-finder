@@ -11,6 +11,5 @@ export const getItems = async ({ searchName, currentPage }) => {
       key: '38733700-96318c553c84bf90463eb3752',
     },
   });
-  console.log(response.data.hits);
   return response.data.hits;
 };
