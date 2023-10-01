@@ -15,7 +15,6 @@ export class Searchbar extends Component {
 
   handleChange = async e => {
     this.setState({ searchValue: e.target.value });
-    console.log(this.state.searchValue);
   };
 
   handleSubmit = async e => {
