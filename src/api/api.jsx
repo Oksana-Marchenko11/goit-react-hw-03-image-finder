@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { App } from '../components/App';
 
 axios.defaults.baseURL = 'https://pixabay.com/api/';
 

@@ -17,8 +17,6 @@ export class App extends Component {
   };
   handleSubmit = searchValue => {
     this.setState({ searchName: searchValue });
-    console.log(this.state.searchName);
-    console.log(searchValue);
     this.setState({ currentPage: 1, images: [] });
   };
   loadMore = () => {
@@ -34,7 +32,6 @@ export class App extends Component {
     ) {
       try {
         this.setState({ isLoading: true });
-        console.log(searchName);
         const result = await getItems({ searchName, currentPage });
         this.setState({ images: [...this.state.images, ...result] });
         console.log(this.state);
