@@ -11,5 +11,5 @@ export const getItems = async ({ searchName, currentPage }) => {
       key: '38733700-96318c553c84bf90463eb3752',
     },
   });
-  return response.data.hits;
+  return response;
 };

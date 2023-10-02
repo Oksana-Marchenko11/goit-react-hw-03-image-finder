@@ -49,7 +49,7 @@ export const SearchFormBtn = styled.button`
 export const SearchFormInput = styled.input`
 display: inline-block;
 width: 100%;
-font-size: 20px;
+ font-size: 20px;
 border: none;
 outline: none;
 padding-left: 4px;

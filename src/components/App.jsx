@@ -33,7 +33,12 @@ export class App extends Component {
       try {
         this.setState({ isLoading: true });
         const result = await getItems({ searchName, currentPage });
-        this.setState({ images: [...this.state.images, ...result] });
+        this.setState({ images: [...this.state.images, ...result.data.hits] });
+        this.setState({
+          totalPages: Math.ceil(
+            result.data.total / result.config.params.per_page
+          ),
+        });
         console.log(this.state);
       } catch (e) {
         console.log('error');
